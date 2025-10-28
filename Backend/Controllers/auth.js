@@ -47,9 +47,10 @@ const login  = asyncErrorWrapper (async(req,res,next) => {
         return next(new CustomError("Invalid credentials",404))
     }
 
-    if(!comparePassword(password,user.password)){
-        return next(new CustomError("Please chech your credentails",404))
-    }
+    if(!comparePassword(password, user.password)) {
+    return next(new CustomError("Please check your credentials", 404))
+}
+
 
     sendToken(user ,200,res)  ;
     
