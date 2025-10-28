@@ -114,7 +114,22 @@
     font-weight: normal;
 }
 
+.story-card .story-author-and-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.story-card .story-author {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 .story-card .story-createdAt {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(48, 47, 47);
+    font-size: 0.9rem;
 }

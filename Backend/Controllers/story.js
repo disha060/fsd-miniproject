@@ -40,7 +40,7 @@ const addStory = asyncErrorWrapper(async  (req,res,next)=> {
 
 const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
-    let query = Story.find();
+    let query = Story.find().populate("author");
 
     query =searchHelper("title",query,req)
 

@@ -32,15 +32,16 @@ const Story = ({ story }) => {
                     <h5 className="story-title">
                         
                     {story.title.length > 76 ? truncateTitle(story.title)+"..." : story.title
-                    
                     }
                     </h5>
 
 
                     <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content) +"..."}}>
                         </p>
-                    <p className="story-createdAt">{editDate(story.createdAt)} 
-                    </p>
+                    <div className="story-author-and-date">
+                        <p className="story-author">By {story.author.username}</p>
+                        <p className="story-createdAt">{editDate(story.createdAt)}</p>
+                    </div>
                 </div>
             </Link>
         </div>
